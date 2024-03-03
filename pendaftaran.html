@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Halaman Pendaftaran</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Shaffa Dwiaji">
+        <meta name="nim" content="234311028">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header {
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            nav {
+                float: left;
+                width: 30%;
+                height: 400px;
+                background: #ccc;
+                padding: 20px;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 400px;
+            }
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer {
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Judul Website</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h1>Form Penjadwal Pertemuan</h1>
+                <form method="POST" target="_blank">
+                    <fieldset>
+                      <legend>Informasi Pribadi</legend>
+                      <table>
+                        <tr>
+                          <td nowrap>
+                            <strong>Nama</strong>
+                          </td>
+                          <td>
+                            <input type="text" id="nama" name="nama" required>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td nowrap>
+                            <strong>No. Telepon</strong>
+                          </td>
+                          <td width="500px">
+                            <input type="tel" id="no_telepon" name="no_telepon" pattern="[0-9]{4}-[0-9]{6}" required>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="500px" nowrap>
+                            <strong>Alamat Email</strong>
+                          </td>
+                          <td>
+                            <input type="email" id="email" name="email" required>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="500px" nowrap>
+                            <strong>Tanggal Lahir</strong>
+                          </td>
+                          <td>
+                            <input type="date" id="tanggal_lahir" name="tanggal_lahir" min="1987-01-01" max="1993-01-01" required>
+                          </td>
+                        </tr>
+                      </table>
+                  </fieldset>
+                  <!---Form 2-->
+                  <fieldset>
+                    <legend>Permintaan Pertemuan</legend>
+                    <table>
+                      <tr>
+                        <td nowrap>
+                          <strong>Tujuan Pertemuan</strong>
+                        </td>
+                        <td>
+                          <input type="text" id="tujuan" name="tujuan" required>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="500px" nowrap>
+                          <strong>Tingkat Kepentingan Pertemuan</strong>
+                        </td>
+                        <td width="500px">
+                          <input type="number" id=" tingkat" name="tingkat" required min="0" max="10">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="500px" nowrap>
+                          <strong>Tanggal</strong>
+                        </td>
+                        <td>
+                          <input type="date" id="tanggal" name="tanggal" min="<?php echo date('d-m-Y'); ?>" required>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="500px" nowrap>
+                          <strong>Waktu</strong>
+                        </td>
+                        <td>
+                          <input type="time" id="waktu" name="waktu" min="17:00" max="21:00" required>
+                        </td>
+                      </tr>
+                    </table>
+                </fieldset>
+                <br>
+                    <div class="button-container">
+                        <input type="submit" value="Submit">
+                    </div>
+                  </form>
+            </article>
+        </section>
+
+        <footer>
+            <p><i>copyright© shaffadwiaji</i></p>
+        </footer>
+    </body>
+</html>
